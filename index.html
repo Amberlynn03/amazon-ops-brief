@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="每日亚马逊政策、卖家讨论与实战案例情报库">
+  <title>Amazon Ops Brief</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%2314211c'/%3E%3Ctext x='32' y='43' text-anchor='middle' font-family='Arial' font-size='38' font-weight='700' fill='white'%3EA%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="Amazon Ops Brief 首页">
+      <span class="brand-mark">A</span>
+      <span><strong>Amazon Ops Brief</strong><small>亚马逊运营情报库</small></span>
+    </a>
+    <nav class="main-nav" aria-label="主导航">
+      <button class="nav-link active" data-view="latest">今日速递</button>
+      <button class="nav-link" data-view="archive">历史档案</button>
+      <button class="nav-link" data-view="cases">实战案例</button>
+    </nav>
+    <div class="update-status"><span class="status-dot"></span><span id="updateLabel">正在读取更新</span></div>
+  </header>
+
+  <main>
+    <section class="brief-header">
+      <div class="brief-copy">
+        <p class="eyebrow">DAILY INTELLIGENCE</p>
+        <h1 id="pageTitle">今天值得关注的变化</h1>
+        <p id="pageDescription">把政策变化、卖家风险和可复用的方法压缩到一个页面。</p>
+        <div class="brief-meta"><span>Amazon官方信息优先</span><span>社区信号交叉判断</span><span>每日更新</span></div>
+      </div>
+      <div class="date-control">
+        <label for="dateSelect">速递日期</label>
+        <select id="dateSelect"></select>
+      </div>
+    </section>
+
+    <section class="executive-brief" aria-labelledby="executiveTitle">
+      <div class="executive-heading">
+        <div>
+          <p class="section-kicker">EXECUTIVE BRIEF</p>
+          <h2 id="executiveTitle">今日商业判断</h2>
+        </div>
+        <span id="confidenceLabel" class="confidence-label">基于今日公开信号</span>
+      </div>
+      <p id="executiveSummary" class="executive-summary"></p>
+      <div id="insightGrid" class="insight-grid"></div>
+    </section>
+
+    <section class="metrics" aria-label="内容摘要">
+      <div class="metric"><strong id="policyCount">0</strong><span>政策更新</span></div>
+      <div class="metric"><strong id="discussionCount">0</strong><span>卖家关注</span></div>
+      <div class="metric"><strong id="caseCount">0</strong><span>实战案例</span></div>
+      <div class="metric priority"><strong id="actionCount">0</strong><span>建议优先处理</span></div>
+    </section>
+
+    <section class="workspace">
+      <aside class="filters">
+        <div class="search-wrap">
+          <span aria-hidden="true">⌕</span>
+          <input id="searchInput" type="search" placeholder="搜索政策、案例或关键词">
+        </div>
+        <div class="filter-group">
+          <p>内容类型</p>
+          <button class="filter-button active" data-type="all"><span>全部内容</span><b id="allCount">0</b></button>
+          <button class="filter-button" data-type="policy"><span>官方政策</span><b id="policyFilterCount">0</b></button>
+          <button class="filter-button" data-type="discussion"><span>卖家讨论</span><b id="discussionFilterCount">0</b></button>
+          <button class="filter-button" data-type="case"><span>实战案例</span><b id="caseFilterCount">0</b></button>
+        </div>
+        <div class="filter-group">
+          <p>高频主题</p>
+          <div id="tagFilters" class="tag-filters"></div>
+        </div>
+      </aside>
+
+      <section class="feed">
+        <div class="feed-toolbar">
+          <p id="resultLabel">全部内容</p>
+          <button id="clearFilters" class="text-button">清除筛选</button>
+        </div>
+        <div id="feedList"></div>
+        <div id="emptyState" class="empty-state" hidden>
+          <strong>没有匹配的情报</strong>
+          <p>更换关键词或清除筛选条件。</p>
+        </div>
+      </section>
+
+      <aside class="daily-actions">
+        <div class="actions-head"><p>当日行动清单</p><span id="actionDate"></span></div>
+        <div id="actionList"></div>
+      </aside>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>Amazon Ops Brief</span>
+    <p>公开信息研究摘要，不构成法律、税务或平台合规意见。</p>
+  </footer>
+
+  <template id="itemTemplate">
+    <article class="intel-card">
+      <div class="card-meta">
+        <span class="type-badge"></span>
+        <span class="item-date"></span>
+        <span class="priority-badge"></span>
+      </div>
+      <h2></h2>
+      <p class="summary"></p>
+      <div class="detail-block"><strong class="detail-label"></strong><p class="detail-text"></p></div>
+      <div class="card-footer">
+        <div class="item-tags"></div>
+        <a class="source-link" target="_blank" rel="noopener noreferrer">查看原文 <span>↗</span></a>
+      </div>
+    </article>
+  </template>
+  <script src="app.js"></script>
+</body>
+</html>
