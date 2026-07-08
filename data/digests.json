@@ -1,5 +1,208 @@
 [
   {
+    "date": "2026-07-08",
+    "confidence": "3项官方/可信来源更新 · 8项社区经营信号",
+    "executiveSummary": "今天最重要的变化不是亚马逊单独发布了新规则，而是美国消费品进口合规进入实操阶段：CPSC eFiling从7月8日起对多数受监管消费品强制生效，进口商需要在入境时提交证书数据。社区讨论显示，卖家正在同时面对三类压力：标题75字符与AI导购带来的Listing结构重写、Prime Day后流量恢复分化、受限商品/清关/退款等供应链和合规异常。企业级处理重点应从“单点救火”转向“产品合规证据、Listing信息架构、广告素材测试和大促后经营复盘”四套可复用流程。",
+    "insights": [
+      {
+        "title": "美国站合规正在前移到入境环节",
+        "text": "事实：CPSC官方说明，2026年7月8日起多数受监管进口消费品需要在入境时通过ACE提交证书数据，FTZ场景另有2027年1月8日节点。推断：宠物、儿童、家居、服饰配件、电子周边等可能触发CPSC规则的品类，不能再把CPC/GCC当作“被抽查时再补”的文件。证据边界：CPSC eFiling不改变哪些产品需要证书，但改变了证书数据提交时间和供应链协同责任。",
+        "signal": "官方法规生效 · 高置信度"
+      },
+      {
+        "title": "Listing竞争进入结构化表达阶段",
+        "text": "事实：标题75字符话题在社区持续高热，卖家开始讨论配件类、长规格类产品如何在短标题下保留识别信息；SP-API也已更新部分商品类型的属性用途和枚举值。推断：未来标题、属性、五点、Item Highlights、Search Terms和AI导购可读性要统一设计，单纯删字会损失搜索和转化解释力。",
+        "signal": "官方规则 + 社区应对 · 高置信度"
+      },
+      {
+        "title": "Prime Day后表现分化说明复盘必须按类目和资产拆解",
+        "text": "事实：社区同时出现Prime Day后流量腰斩和销量恢复正常两种反馈；另有SP视频位案例显示，同一产品不同广告位表现差异明显。推断：大促后不能用平台整体流量解释所有变化，应按价格、活动资格、库存、广告位、自然词、复购和竞品促销分别诊断。社区反馈是样本观察，不能泛化为平台算法结论。",
+        "signal": "社区样本归纳 · 中等置信度"
+      }
+    ],
+    "actions": [
+      {
+        "text": "对美国站所有可能触发CPSC的ASIN建立清单：HTS、适用标准、CPC/GCC、测试报告、证书标识、进口商/报关行传递路径和eFiling责任人。",
+        "category": "合规入境"
+      },
+      {
+        "text": "用Top ASIN先跑标题75字符改写：标题保留品类+核心规格，属性和Item Highlights承接材料、尺寸、兼容性、用途和差异点。",
+        "category": "Listing治理"
+      },
+      {
+        "text": "Prime Day后复盘按ASIN拆分自然词、广告位、优惠、库存、价格、毛利和退款原因；不要只看销售额单日涨跌。",
+        "category": "经营复盘"
+      }
+    ],
+    "items": [
+      {
+        "type": "official_policy",
+        "title": "CPSC eFiling 7月8日起强制生效，受监管消费品入境需提交证书数据",
+        "dateLabel": "2026年7月8日生效",
+        "summary": "美国CPSC官方说明，更新后的16 CFR part 1110要求多数受监管进口消费品在入境时电子提交合规证书数据；FTZ进入消费或仓储的适用日期为2027年1月8日。CPSC Product Registry只是可选的数据仓库，不会自动与CBP ACE系统通信，进口商仍需把证书标识或完整数据交给报关行用于申报。",
+        "detailLabel": "经营影响",
+        "detail": "美国站卖家如果销售儿童用品、宠物用品、服饰配件、家居用品、电器周边等可能受CPSC规则约束的产品，需要把CPC/GCC、测试报告、HTS、制造地、测试日期、实验室和记录联系人提前结构化。对FBA来说，风险点在于货物到港才发现证书数据无法申报，导致清关延迟、仓储费用、活动断货或被平台合规团队要求补资料。建议今天开始按ASIN建立eFiling字段表，并确认进口商、货代、报关行谁负责录入Full PGA或Reference PGA信息。",
+        "source": "https://www.cpsc.gov/FAQ/eFiling-Frequently-Asked-Questions-FAQ",
+        "tags": [
+          "CPSC",
+          "eFiling",
+          "美国清关"
+        ],
+        "priority": "high"
+      },
+      {
+        "type": "official_policy",
+        "title": "SP-API商品属性用途和枚举值更新已在6月29日生效",
+        "dateLabel": "官方发布6月10日 · 6月29日生效",
+        "summary": "Amazon SP-API公告显示，多个站点和商品类型的Listing属性用途与枚举值在6月29日更新，目标是减少冗余属性并优化商品类型对应属性。该更新会影响通过API、ERP或批量模板维护Listing的卖家。",
+        "detailLabel": "经营影响",
+        "detail": "如果近期出现类目、属性、变体、商品类型或前台节点异常，不应只看后台是否保存成功。技术和运营需要同步检查Product Type Definitions、Listings Items API返回的属性约束、处理报告和前台展示结果。尤其在标题75字符和Item Highlights调整期，属性字段将承担更多结构化信息表达，ERP字段映射要跟着更新。",
+        "source": "https://developer-docs.amazon.com/sp-api/changelog",
+        "tags": [
+          "SP-API",
+          "Listing属性",
+          "商品类型"
+        ],
+        "priority": "normal"
+      },
+      {
+        "type": "official_policy",
+        "title": "Amazon Ads 7月扩展对话式提示和AI创意能力，视频/富媒体素材门槛继续降低",
+        "dateLabel": "官方发布6月 · 7月扩展",
+        "summary": "Amazon Ads在Cannes Lions新闻中提到，Responsive eCommerce Creative可根据版位、设备、购物意图和目标动态生成并优化广告，官方披露使用该能力的广告主最高获得37%更高点击率和26%更高转化率；7月起对话式提示将从Amazon.com扩展到开放互联网第三方发布站点。该内容偏广告产品方向，不是卖家强制政策。",
+        "detailLabel": "经营影响",
+        "detail": "对品牌型卖家和有站外/全漏斗预算的团队，素材测试从“单张图/单条视频”变成可规模化变量实验。中小卖家可以先把该趋势转化为内部动作：为主力ASIN建立产品使用场景、痛点、对比、短视频脚本和素材标签库，为SP视频位、SB视频和站外展示准备可复用资产。",
+        "source": "https://advertising.amazon.com/library/news/cannes-lions-2026-news-advertising",
+        "tags": [
+          "Amazon Ads",
+          "AI创意",
+          "视频广告"
+        ],
+        "priority": "normal"
+      },
+      {
+        "type": "discussion",
+        "title": "关于7月8日美线CPSC eFiling新规，卖家开始集中追问实操路径",
+        "dateLabel": "7月8日发现",
+        "summary": "知无不言最新列表中出现关于7月8日美线CPSC eFiling新规该怎么操作的讨论，说明卖家已经从“知道有政策”进入“货代、证书、报关怎么衔接”的执行层面。该帖部分信息依赖社区回复，公开摘要有限，因此以风险框架为主。",
+        "detailLabel": "下一步动作",
+        "detail": "先不要只问货代“能不能走”，而要明确三件事：产品是否受CPSC强制标准约束、是否已有可支撑CPC/GCC的测试报告、报关行准备用Full PGA还是Reference PGA申报。如果货代只给口头保证，企业应要求其提供字段清单、责任边界和异常处理方案；高风险产品不要等FBA到港后再补证书。",
+        "source": "https://www.wearesellers.com/question/120007",
+        "tags": [
+          "CPSC",
+          "货代",
+          "报关"
+        ],
+        "priority": "high"
+      },
+      {
+        "type": "discussion",
+        "title": "标题75字符新规持续高热：卖家开始讨论PD后分批测试改写",
+        "dateLabel": "7月8日仍活跃",
+        "summary": "社区超级话题认为75字符标题可能是此前二段式标题测试的强制落地，并建议在Prime Day结束后进行小范围测试，再批量调整。帖子明确提醒，7月27日后未修改的标题可能被亚马逊应用AI自动修改。",
+        "detailLabel": "可借鉴点",
+        "detail": "对配件、兼容型、多规格产品，短标题最容易丢失型号、适配对象和关键尺寸。建议分三层重写：标题只放买家一眼识别所需的信息；Item Highlights和五点承接材料、用途、兼容性和场景；后台属性和Search Terms承接长尾表达。测试时应记录修改前后的点击率、转化率、自然词排名、广告相关性和买家问答变化，不要全店一次性替换。",
+        "source": "https://www.wearesellers.com/question/120904",
+        "tags": [
+          "标题新规",
+          "Listing改写",
+          "AI自动修改"
+        ],
+        "priority": "high"
+      },
+      {
+        "type": "discussion",
+        "title": "新品FBA退款率20%，91%退款原因为UNDELIVERABLE_UNKNOWN",
+        "dateLabel": "7月8日最新活跃",
+        "summary": "卖家反馈新品FBA退款率达到20%，其中91%标记为UNDELIVERABLE_UNKNOWN，正在寻求排查思路。公开列表只显示标题和基础互动，缺少完整详情，因此只能做诊断框架。",
+        "detailLabel": "排查路径",
+        "detail": "该类问题不要先归因产品质量。应按订单维度拉取配送承运、收货地址异常、买家取消、仓库区域、包装尺寸重量、危险品/限制标记、Listing承诺时效和批次入仓时间。若集中在某仓、某批次或某配送区域，优先开Case要求FBA调查履约异常；若分散出现，则检查包装、标签、商品尺寸和地址不可达等系统性因素。",
+        "source": "https://www.wearesellers.com/question/121810",
+        "tags": [
+          "FBA退款",
+          "配送失败",
+          "新品诊断"
+        ],
+        "priority": "high"
+      },
+      {
+        "type": "discussion",
+        "title": "货已发FBA后Listing被误判医疗相关并冻结，卖家反复申诉未恢复",
+        "dateLabel": "旧帖7月8日活跃",
+        "summary": "卖家在Listing创建后观察一个月未触发审核，但货接近FBA仓库时被判违反受限商品政策，且多次Case均未恢复。问题集中在敏感词、属性误判、翻新风险和货值已投入后的止损方案。",
+        "detailLabel": "处理建议",
+        "detail": "这类案例的关键不是“换个链接再来”，而是先定位触发点：标题、五点、图片、类目、用途描述、Search Terms、A+或变体是否暗示医疗、治疗、康复、检测等功能。申诉材料应包含产品真实用途、非医疗属性证明、包装和说明书、合规测试/认证、竞品同类页面对比和整改版本。货已入仓时，翻新或重建Listing存在重复违规和库存不可售风险，应先争取原ASIN解除误判或确认可移除库存再处理。",
+        "source": "https://www.wearesellers.com/question/113137",
+        "tags": [
+          "受限商品",
+          "医疗误判",
+          "FBA库存"
+        ],
+        "priority": "high"
+      },
+      {
+        "type": "discussion",
+        "title": "高货值产品出口美国：正清、灰清与美国本土公司清关成本被重新讨论",
+        "dateLabel": "旧帖7月8日活跃",
+        "summary": "卖家讨论高货值、重货大件产品出口美国时，是否应从双清包税转向更规范的清关方式，甚至注册美国本土公司作为进口主体。帖子回复有限，但与7月8日CPSC eFiling、美国清关审查趋严形成同一风险方向。",
+        "detailLabel": "风险提示",
+        "detail": "高货值货物若继续依赖不透明双清包税，短期可能省事，长期会把进口主体、货值申报、税费、查验和产品合规风险留在灰区。若产品涉及CPSC、FDA、FCC、UL或高关税敏感品类，应优先明确进口商责任、真实申报价值、HTS和证书数据。注册美国公司不是万能解法，核心是能否承担Importer of Record义务、税务申报、产品责任和售后风险。",
+        "source": "https://www.wearesellers.com/question/117183",
+        "tags": [
+          "美国清关",
+          "高货值",
+          "进口主体"
+        ],
+        "priority": "normal"
+      },
+      {
+        "type": "discussion",
+        "title": "Prime Day后单量没有大跌，部分卖家反馈恢复到正常水平",
+        "dateLabel": "7月8日活跃",
+        "summary": "与此前Prime Day后流量腰斩的讨论相反，有卖家反馈会员日前三天惨淡、最后一天稍有起色，活动结束后销量反而比6月低迷期更好，广告消耗也没有明显放大。这说明大促后表现存在类目和ASIN分化。",
+        "detailLabel": "判断边界",
+        "detail": "该帖不能证明平台整体流量恢复，只能说明部分商品在大促后仍可能承接自然需求。复盘时要看是否有竞品断货、价格回调、关键词排名稳定、广告预算未失控、Review或配送时效改善等因素。管理层不应按单个店铺情绪决定预算，而应按ASIN分组复盘：活动款、非活动款、清货款、新品和利润款分别处理。",
+        "source": "https://www.wearesellers.com/question/121701",
+        "tags": [
+          "Prime Day",
+          "大促后复盘",
+          "销量波动"
+        ],
+        "priority": "normal"
+      },
+      {
+        "type": "case",
+        "title": "SP视频广告位实操复盘：用转化率和ACOS决定竞价比例",
+        "dateLabel": "7月8日活跃",
+        "summary": "卖家分享SP视频广告位测试案例：某广告组视频位12单、转化率57.1%，高于产品整体53.2%，因此将视频位竞价比例从50%提高到75%；另一组转化率33.4%、ACOS 33.83%，则先保持10%观察。该内容对未品牌备案或视频素材有限的卖家有实操价值。",
+        "detailLabel": "可借鉴点",
+        "detail": "核心不是盲目追视频位，而是把视频位当成单独版位管理：有足够订单且CVR高于整体时加比例放量；CVR低且ACOS偏高时先控CPC或降低比例；数据量太小时先拿样本，不要过早否定；长尾词零展示不一定是出价低，可能是搜索量不足。建议每个主力ASIN至少准备一个15-30秒产品使用/对比视频，并在广告报表里单独看placement表现。",
+        "source": "https://www.wearesellers.com/question/118759",
+        "tags": [
+          "SP视频广告",
+          "PPC",
+          "广告复盘"
+        ],
+        "priority": "high"
+      },
+      {
+        "type": "discussion",
+        "title": "运营日常检查清单被高频讨论：链接、竞品、排名和异常预警要流程化",
+        "dateLabel": "7月8日最新活跃",
+        "summary": "社区出现“亚马逊运营每天到底需要检查哪些链接和数据”的讨论，反映团队希望把日常运营从个人经验转成可执行检查表。该帖公开内容有限，但主题本身对管理有实际价值。",
+        "detailLabel": "建议清单",
+        "detail": "基础检查应覆盖：核心ASIN前台可售、Buy Box、价格和优惠、库存天数、广告预算消耗、CTR/CVR/ACOS异常、自然关键词排名、主要竞品价格/促销/Review变化、账户健康、Case和绩效通知。更成熟的做法是把异常分级：当天必须处理、48小时内处理、周复盘处理，避免运营每天被零散问题打断。",
+        "source": "https://www.wearesellers.com/question/118647",
+        "tags": [
+          "运营SOP",
+          "数据检查",
+          "异常预警"
+        ],
+        "priority": "normal"
+      }
+    ]
+  },
+  {
     "date": "2026-07-07",
     "confidence": "2项官方/准官方更新 · 7项社区经营信号",
     "executiveSummary": "今天没有发现亚马逊在7月7日当天新发布的强制政策，但有两个近期官方信号需要纳入经营日历：7月27日起非媒介类标题压缩到75字符并引入Item Highlights，Seller University已对非卖家账号开放。社区新活跃显示，Prime Day首日反馈分化明显，卖家同时在处理标题新规下的AI导购可读性、香港/大陆主体切换、跨站点自动同步导致的合规/IP风险、FBA入仓缺失索赔和新品广告抢品牌词等问题。管理层今天最该做的不是追单条技巧，而是把Listing结构、账号主体关系、跨站点同步和入仓证据链变成可审计的标准流程。",
