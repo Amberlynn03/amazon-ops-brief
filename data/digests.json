@@ -1,5 +1,568 @@
 [
   {
+    "date": "2026-07-24",
+    "confidence": "0项新增强制官方政策 · 10项社区经营信号",
+    "executiveSummary": "7月24日最重要的经营信号是AI图片标注和75字符标题进入落地期，社区开始从“要不要改”转向“怎么批量改、怎么保转化、怎么避免素材违规”。同时，库存审核、视频验证、主体地址、广告转化、自然排名消失和安全召回仍是高损失风险。今天没有发现比前期已记录内容更新的强制官方政策，因此官方侧不重复输出。",
+    "insights": [
+      {
+        "title": "AI素材合规成为Listing治理的一部分",
+        "text": "事实：AI人物图、A+图是否标注、纽约AI模特披露、AI图片实操分享多帖活跃。推断：图片来源、人物合成和场景真实性需要纳入素材台账。证据边界：社区讨论不能替代各站点正式法务判断。",
+        "signal": "社区集中反馈 · 中高置信度"
+      },
+      {
+        "title": "标题新规倒计时推动页面系统性改版",
+        "text": "事实：75字符标题、图片承接、Item Highlights刷新不出等问题高频出现。推断：标题改写会牵动主图、亮点、属性和广告词相关性，不能由单个运营孤立完成。",
+        "signal": "官方既有规则 + 社区执行问题 · 高置信度"
+      },
+      {
+        "title": "库存和账号验证正在压缩卖家反应时间",
+        "text": "事实：14天库存审核、库存弃置、协议3虚拟验证、香港主体地址错误等问题出现。推断：账号和库存风险必须用倒计时管理，逾期后损失会直接变成不可售或弃置。",
+        "signal": "社区风险样本 · 高置信度"
+      }
+    ],
+    "actions": [
+      {
+        "text": "核心ASIN在7月27日前完成75字符标题、Item Highlights、主图和A+的一次版本冻结，并设置7天监控窗口。",
+        "category": "Listing治理"
+      },
+      {
+        "text": "广告复盘统一使用关键词、广告位、自然位、毛利和退货率五维表，禁止只按ACOS单点调价。",
+        "category": "广告治理"
+      },
+      {
+        "text": "库存、召回、KYC、主体和视频验证类问题全部建立证据包和倒计时升级路径。",
+        "category": "合规风控"
+      }
+    ],
+    "items": [
+      {
+        "type": "discussion",
+        "title": "亚马逊AI图片合规：人物图、A+图是否需要标注",
+        "dateLabel": "补档发现",
+        "summary": "社区最新实操帖集中讨论哪些AI生成图片需要打标、如何打标、老图片是否需要补标。",
+        "detailLabel": "经营影响",
+        "detail": "建议建立素材来源台账：真实拍摄、AI背景、AI人物、合成场景分别标记。涉及人物、背影、代言感、场景效果的素材优先做合规判断并保留源文件。",
+        "source": "https://www.wearesellers.com/question/122542",
+        "tags": [
+          "AI图片",
+          "A+",
+          "素材合规"
+        ],
+        "priority": "high"
+      },
+      {
+        "type": "discussion",
+        "title": "75字符标题新规：开源Listing写作Skill与批量改写方法",
+        "dateLabel": "补档发现",
+        "summary": "卖家围绕75字符标题新规分享写Listing的Skill和方法，说明运营开始工具化处理标题改写。",
+        "detailLabel": "经营影响",
+        "detail": "工具可提升效率，但企业仍要设置人工审核：核心词、规格、兼容性、禁词和转化表达不能完全交给模型。",
+        "source": "https://www.wearesellers.com/question/122493",
+        "tags": [
+          "标题新规",
+          "AI工具",
+          "Listing"
+        ],
+        "priority": "high"
+      },
+      {
+        "type": "discussion",
+        "title": "Item Highlights属性一直刷新不出来",
+        "dateLabel": "补档发现",
+        "summary": "卖家反馈为配合标题新规调整Item Highlights，但后台属性无法刷新出来。",
+        "detailLabel": "经营影响",
+        "detail": "短期应保留标题和五点承接方案，不要反复刷模板造成目录冲突；同时开Case确认类目是否开放Item Highlights。",
+        "source": "https://www.wearesellers.com/question/122598",
+        "tags": [
+          "Item Highlights",
+          "目录字段"
+        ],
+        "priority": "high"
+      },
+      {
+        "type": "discussion",
+        "title": "14天库存审核倒计时、库存被弃置、店铺被停用",
+        "dateLabel": "补档发现",
+        "summary": "卖家反馈库存审核倒计时、库存弃置和店铺停用风险同时出现。",
+        "detailLabel": "经营影响",
+        "detail": "这类事项要并行处理账号审核和库存止损：申请暂停弃置、备份库存报表、提交主体/地址/账单材料，设置逐日升级。",
+        "source": "https://www.wearesellers.com/question/122610",
+        "tags": [
+          "库存审核",
+          "账号停用"
+        ],
+        "priority": "high"
+      },
+      {
+        "type": "discussion",
+        "title": "香港主体地址变更与后台地址写错的风险",
+        "dateLabel": "补档发现",
+        "summary": "香港主体营业执照地址、经营地址和秘书公司地址多次变化，卖家担心是否必须更新后台。",
+        "detailLabel": "经营影响",
+        "detail": "地址变更要以主体文件、后台资料、银行账单和视频验证可解释性为准；不要隐瞒关键变更，也不要频繁提交不一致地址。",
+        "source": "https://www.wearesellers.com/question/122605",
+        "tags": [
+          "香港主体",
+          "地址证明"
+        ],
+        "priority": "high"
+      },
+      {
+        "type": "discussion",
+        "title": "协议3虚拟身份验证信用卡对账单问题",
+        "dateLabel": "补档发现",
+        "summary": "卖家触发协议3虚拟身份验证，关注信用卡对账单材料。",
+        "detailLabel": "经营影响",
+        "detail": "对账单需能证明主体、地址、持卡人和店铺资料一致；截图或临时账单不充分时应补正式银行文件。",
+        "source": "https://www.wearesellers.com/question/122606",
+        "tags": [
+          "协议3",
+          "视频验证"
+        ],
+        "priority": "normal"
+      },
+      {
+        "type": "case",
+        "title": "手动广告能出单、自动广告不出单，标品如何继续优化",
+        "dateLabel": "补档发现",
+        "summary": "标品跑一个月广告后手动广告能出单，自动广告表现弱，主图与同行区别不大。",
+        "detailLabel": "经营影响",
+        "detail": "先确认自动广告是否被低相关流量消耗，再用手动出单词反哺Listing和词库。标品主图差异不明显时，要从价格、套装、Review和场景图建立点击理由。",
+        "source": "https://www.wearesellers.com/question/122567",
+        "tags": [
+          "自动广告",
+          "标品",
+          "转化"
+        ],
+        "priority": "high"
+      },
+      {
+        "type": "case",
+        "title": "上架三个月后重推，14.99美元产品基本靠广告出单",
+        "dateLabel": "补档发现",
+        "summary": "老新品接手重推，CPC 1.5-2.0美元，每天2-3单且不稳定。",
+        "detailLabel": "经营影响",
+        "detail": "先判断广告获客成本是否匹配14.99美元客单价，再决定是否继续推。低客单产品如果不能形成自然位或复购，长期靠广告很难成立。",
+        "source": "https://www.wearesellers.com/question/122506",
+        "tags": [
+          "新品重推",
+          "低客单"
+        ],
+        "priority": "high"
+      },
+      {
+        "type": "discussion",
+        "title": "大词自然排名突然消失，小词跌到8-9页",
+        "dateLabel": "补档发现",
+        "summary": "卖家链接广告转化高、退货低、星级4.3，但大词自然排名突然消失并持续三个月。",
+        "detailLabel": "经营影响",
+        "detail": "排查顺序应包括搜索抑制、类目/节点、价格、库存、关键词相关性、竞品变化和历史违规；不要只用加广告解释自然位问题。",
+        "source": "https://www.wearesellers.com/question/122489",
+        "tags": [
+          "自然排名",
+          "搜索流量"
+        ],
+        "priority": "high"
+      },
+      {
+        "type": "discussion",
+        "title": "产品因Safety Recall要求移除库存",
+        "dateLabel": "补档发现",
+        "summary": "卖家收到产品因safety recall要求移除库存的邮件。",
+        "detailLabel": "经营影响",
+        "detail": "召回相关通知优先级高于普通合规Case。应确认召回范围、批次、库存、保险和消费者通知义务，避免继续销售同批次产品。",
+        "source": "https://www.wearesellers.com/question/114126",
+        "tags": [
+          "安全召回",
+          "库存移除"
+        ],
+        "priority": "high"
+      }
+    ]
+  },
+  {
+    "date": "2026-07-23",
+    "confidence": "补档记录 · 7项社区经营信号",
+    "executiveSummary": "7月23日补档重点是账号主体与品牌/跟卖集中迁移、视频验证、旺季现金流和FBA货件异常。官方侧没有新增强制政策。",
+    "insights": [
+      {
+        "title": "账号资产迁移风险上升",
+        "text": "事实：多店铺品牌和链接跟卖汇总、美国站主体变更、同公司多站点主体拆分等问题活跃。推断：链接资产迁移必须先明确权利链和目录贡献权。",
+        "signal": "社区风险 · 高置信度"
+      },
+      {
+        "title": "旺季准备开始从Deal转向现金流",
+        "text": "事实：Prime Day后下一轮旺季、现金流、建单异常和入库缺陷费讨论活跃。推断：供应链和现金流计划应优先于追加广告。",
+        "signal": "经营信号 · 中高置信度"
+      }
+    ],
+    "actions": [
+      {
+        "text": "核心ASIN在7月27日前完成75字符标题、Item Highlights、主图和A+的一次版本冻结，并设置7天监控窗口。",
+        "category": "Listing治理"
+      },
+      {
+        "text": "广告复盘统一使用关键词、广告位、自然位、毛利和退货率五维表，禁止只按ACOS单点调价。",
+        "category": "广告治理"
+      },
+      {
+        "text": "库存、召回、KYC、主体和视频验证类问题全部建立证据包和倒计时升级路径。",
+        "category": "合规风控"
+      }
+    ],
+    "items": [
+      {
+        "type": "discussion",
+        "title": "多个店铺品牌和链接通过跟卖集中到一个店铺的可行性",
+        "dateLabel": "补档发现",
+        "summary": "卖家因不可抗力希望把多个店铺品牌和链接集中到一个店铺。",
+        "detailLabel": "经营影响",
+        "detail": "高风险。需要先处理品牌授权、目录贡献权、库存所有权、主体关系和账号关联说明，不应直接靠跟卖完成资产迁移。",
+        "source": "https://www.wearesellers.com/question/122577",
+        "tags": [
+          "品牌迁移",
+          "跟卖",
+          "账号关联"
+        ],
+        "priority": "high"
+      },
+      {
+        "type": "discussion",
+        "title": "同一家公司开美国和英欧站，能否只换美国主体",
+        "dateLabel": "补档发现",
+        "summary": "卖家想只给美国站更换主体，英欧站保持不变。",
+        "detailLabel": "经营影响",
+        "detail": "跨站点主体拆分要看账户架构、税务、收款和实际控制人是否可解释；变更前应要求官方确认路径。",
+        "source": "https://www.wearesellers.com/question/122518",
+        "tags": [
+          "主体变更",
+          "多站点"
+        ],
+        "priority": "high"
+      },
+      {
+        "type": "discussion",
+        "title": "美国新店铺触发协议3虚拟身份验证",
+        "dateLabel": "补档发现",
+        "summary": "新店铺触发协议3虚拟身份验证，卖家寻求最新题库。",
+        "detailLabel": "经营影响",
+        "detail": "视频验证不应靠背题库。重点是法人、地址、账单、采购、库存和运营事实一致。",
+        "source": "https://www.wearesellers.com/question/122551",
+        "tags": [
+          "视频验证",
+          "新店铺"
+        ],
+        "priority": "normal"
+      },
+      {
+        "type": "discussion",
+        "title": "美西FBA货件建单超90天被关闭但已送仓",
+        "dateLabel": "补档发现",
+        "summary": "货件建单超90天被CLOSED，7月16日已送仓却扣入库缺陷费且0上架。",
+        "detailLabel": "经营影响",
+        "detail": "保留Shipment ID、预约、POD、箱唛、发票和签收证据，要求FBA调查。超过90天的货件不应继续发运。",
+        "source": "https://www.wearesellers.com/question/122553",
+        "tags": [
+          "FBA入仓",
+          "货件关闭"
+        ],
+        "priority": "high"
+      },
+      {
+        "type": "discussion",
+        "title": "Prime Day后下一轮旺季：不只是Deal还有现金流",
+        "dateLabel": "补档发现",
+        "summary": "社区提醒Prime Day结束后应马上规划下一轮旺季现金流。",
+        "detailLabel": "经营影响",
+        "detail": "旺季计划要同时包含Deal、库存、广告、回款、清货和费用峰值，不应只做活动排期。",
+        "source": "https://www.wearesellers.com/question/122587",
+        "tags": [
+          "旺季",
+          "现金流"
+        ],
+        "priority": "high"
+      },
+      {
+        "type": "discussion",
+        "title": "产品外包装印独立站网址和社媒是否站外导流",
+        "dateLabel": "补档发现",
+        "summary": "卖家询问包装上印官网和社媒、官网可下单是否会被判站外导流。",
+        "detailLabel": "经营影响",
+        "detail": "包装和说明书应避免引导绕开亚马逊交易。品牌官网信息要与售后、保修和合规用途区分清楚。",
+        "source": "https://www.wearesellers.com/question/122594",
+        "tags": [
+          "站外导流",
+          "包装合规"
+        ],
+        "priority": "high"
+      },
+      {
+        "type": "discussion",
+        "title": "食品和商品安全问题：手机充电器",
+        "dateLabel": "补档发现",
+        "summary": "手机充电器触发食品和商品安全问题。",
+        "detailLabel": "经营影响",
+        "detail": "电源类产品优先准备UL/ETL、FCC、说明书、标签和安全测试文件，避免普通申诉材料不足。",
+        "source": "https://www.wearesellers.com/question/122560",
+        "tags": [
+          "充电器",
+          "安全合规"
+        ],
+        "priority": "high"
+      }
+    ]
+  },
+  {
+    "date": "2026-07-22",
+    "confidence": "补档记录 · 7项社区经营信号",
+    "executiveSummary": "7月22日补档聚焦标题新规、广告调价、价格活动不影响后续、Vine/评论、FBA退货和欧洲税务。官方侧无新增强制政策。",
+    "insights": [
+      {
+        "title": "标题新规讨论从文本转向图片承接",
+        "text": "事实：标题新规和顺应新标题规则优化图片的帖子活跃。推断：标题被压缩后，主图、副图和A+要承担更多解释任务。",
+        "signal": "社区执行反馈 · 高置信度"
+      },
+      {
+        "title": "价格和评论策略仍是高风险区",
+        "text": "事实：优惠券不受活动价格影响、定制Vine、FBA退货、评论合并等问题活跃。推断：促销和评论动作必须先看规则边界。",
+        "signal": "社区风险 · 中高置信度"
+      }
+    ],
+    "actions": [
+      {
+        "text": "核心ASIN在7月27日前完成75字符标题、Item Highlights、主图和A+的一次版本冻结，并设置7天监控窗口。",
+        "category": "Listing治理"
+      },
+      {
+        "text": "广告复盘统一使用关键词、广告位、自然位、毛利和退货率五维表，禁止只按ACOS单点调价。",
+        "category": "广告治理"
+      },
+      {
+        "text": "库存、召回、KYC、主体和视频验证类问题全部建立证据包和倒计时升级路径。",
+        "category": "合规风控"
+      }
+    ],
+    "items": [
+      {
+        "type": "discussion",
+        "title": "顺应新标题规则优化产品图片",
+        "dateLabel": "补档发现",
+        "summary": "社区分享标题75字符后，如何用图片补足卖点表达。",
+        "detailLabel": "经营影响",
+        "detail": "标题减少后，首图解决点击，副图解决规格/场景/A+证明价值；图片和标题必须传达同一个核心卖点。",
+        "source": "https://www.wearesellers.com/question/122491",
+        "tags": [
+          "标题新规",
+          "图片优化"
+        ],
+        "priority": "high"
+      },
+      {
+        "type": "discussion",
+        "title": "广告有点击没转化，问题可能不在竞价",
+        "dateLabel": "补档发现",
+        "summary": "卖家讨论点击有但不转化时，不应只调CPC。",
+        "detailLabel": "经营影响",
+        "detail": "先检查价格、Review、主图、页面承诺、配送和竞品；竞价只能改变流量质量，不能修复页面转化。",
+        "source": "https://www.wearesellers.com/question/122514",
+        "tags": [
+          "广告",
+          "转化率"
+        ],
+        "priority": "high"
+      },
+      {
+        "type": "discussion",
+        "title": "大活动后如何不影响优惠券和后续价格",
+        "dateLabel": "补档发现",
+        "summary": "社区讨论大活动或月促后如何避免影响后续优惠券和价格。",
+        "detailLabel": "经营影响",
+        "detail": "建立价格日历，区分Prime专享、BD、LD、Coupon和List Price回看窗口，避免价格螺旋。",
+        "source": "https://www.wearesellers.com/question/122555",
+        "tags": [
+          "价格策略",
+          "优惠券"
+        ],
+        "priority": "high"
+      },
+      {
+        "type": "discussion",
+        "title": "定制Vine还能不能做",
+        "dateLabel": "补档发现",
+        "summary": "卖家询问2026年7月定制Vine和种子链接合并后评论显示问题。",
+        "detailLabel": "经营影响",
+        "detail": "Vine和合并评论属于高风险区，不应通过定制或异常合并规避评价规则。",
+        "source": "https://www.wearesellers.com/question/122573",
+        "tags": [
+          "Vine",
+          "评论合并"
+        ],
+        "priority": "high"
+      },
+      {
+        "type": "discussion",
+        "title": "服装FBA退货率远高于FBM，退回货九成报废",
+        "dateLabel": "补档发现",
+        "summary": "服装卖家反馈FBA退货率远高于FBM，退货后多数报废。",
+        "detailLabel": "经营影响",
+        "detail": "服装FBA要把尺码、材质、主图预期、退货损耗和二次销售率纳入毛利模型。",
+        "source": "https://www.wearesellers.com/question/122474",
+        "tags": [
+          "服装",
+          "FBA退货"
+        ],
+        "priority": "high"
+      },
+      {
+        "type": "discussion",
+        "title": "西班牙欧盟税号验证成功但绩效未消除",
+        "dateLabel": "补档发现",
+        "summary": "卖家西班牙税号页面显示验证成功，但绩效页面仍未消除，无法开启仓储。",
+        "detailLabel": "经营影响",
+        "detail": "税号验证和绩效解除可能不同步。应保留验证截图、税号文件和Case编号，要求税务/仓储团队同步状态。",
+        "source": "https://www.wearesellers.com/question/121759",
+        "tags": [
+          "西班牙",
+          "VAT",
+          "仓储"
+        ],
+        "priority": "normal"
+      },
+      {
+        "type": "discussion",
+        "title": "新卖家佣金优惠额度用完是否导致丢Buy Box",
+        "dateLabel": "补档发现",
+        "summary": "卖家担心新卖家佣金优惠额度用完影响购物车。",
+        "detailLabel": "经营影响",
+        "detail": "佣金优惠到期主要影响成本，不应直接等同购物车资格变化；但价格竞争力和利润会被影响，应重新测算到手价。",
+        "source": "https://www.wearesellers.com/question/122566",
+        "tags": [
+          "佣金优惠",
+          "Buy Box"
+        ],
+        "priority": "normal"
+      }
+    ]
+  },
+  {
+    "date": "2026-07-21",
+    "confidence": "补档记录 · 6项社区经营信号",
+    "executiveSummary": "7月21日补档聚焦新品推广、低价竞争、广告预算、EUDR/木制品合规和账号登录/付款异常。官方侧无新增强制政策。",
+    "insights": [
+      {
+        "title": "新品推广压力仍集中在广告成本和差异化",
+        "text": "事实：新品推不动、无品牌FBM冲BSR、广告占比过高等帖子活跃。推断：低客单、低差异化产品不应只靠广告拉动。",
+        "signal": "社区经营样本 · 中高置信度"
+      },
+      {
+        "title": "欧洲产品合规边界继续扩大",
+        "text": "事实：木质猫抓板EUDR、欧洲店铺合规、9810申报等问题活跃。推断：供应链材料和申报数据需要更早介入选品。",
+        "signal": "合规趋势 · 中等置信度"
+      }
+    ],
+    "actions": [
+      {
+        "text": "核心ASIN在7月27日前完成75字符标题、Item Highlights、主图和A+的一次版本冻结，并设置7天监控窗口。",
+        "category": "Listing治理"
+      },
+      {
+        "text": "广告复盘统一使用关键词、广告位、自然位、毛利和退货率五维表，禁止只按ACOS单点调价。",
+        "category": "广告治理"
+      },
+      {
+        "text": "库存、召回、KYC、主体和视频验证类问题全部建立证据包和倒计时升级路径。",
+        "category": "合规风控"
+      }
+    ],
+    "items": [
+      {
+        "type": "case",
+        "title": "无品牌+新品期+FBM+低预算做到小类BSR第二",
+        "dateLabel": "补档发现",
+        "summary": "社区案例讨论无品牌、FBM、低广告预算新品冲到小类BSR第二。",
+        "detailLabel": "经营影响",
+        "detail": "需拆解类目容量、竞争弱点、价格和真实流量来源，不能只复制FBM或低预算标签。",
+        "source": "https://www.wearesellers.com/question/122495",
+        "tags": [
+          "新品推广",
+          "FBM"
+        ],
+        "priority": "normal"
+      },
+      {
+        "type": "discussion",
+        "title": "现在怎么推新品：广告占比大、大词3-5美元仍没曝光",
+        "dateLabel": "补档发现",
+        "summary": "卖家新品售价16.99，大词竞价3-5美元仍曝光少，整体ACOS 87%。",
+        "detailLabel": "经营影响",
+        "detail": "先判断关键词相关性和收录，低客单产品不能长期承受高CPC。优先从长尾、ASIN定向和页面转化修复入手。",
+        "source": "https://www.wearesellers.com/question/122448",
+        "tags": [
+          "新品",
+          "高CPC"
+        ],
+        "priority": "high"
+      },
+      {
+        "type": "case",
+        "title": "服饰类月销700降到200，冲量还是保利润",
+        "dateLabel": "补档发现",
+        "summary": "服饰类目销量下滑，广告砍到25-30美元后转化崩，卖家纠结冲量或保利润。",
+        "detailLabel": "经营影响",
+        "detail": "先确认下滑来自流量、转化、尺码/库存还是竞品。服饰类不能只按广告预算决策，要看变体和退货。",
+        "source": "https://www.wearesellers.com/question/122459",
+        "tags": [
+          "服饰",
+          "利润",
+          "广告"
+        ],
+        "priority": "high"
+      },
+      {
+        "type": "discussion",
+        "title": "德国站木质猫抓板是否需要EUDR证书",
+        "dateLabel": "补档发现",
+        "summary": "卖家询问木质产品是否涉及欧盟零毁林法规EUDR。",
+        "detailLabel": "经营影响",
+        "detail": "木质、纸质、橡胶等产品应提前核对EUDR适用范围、HS编码和供应链追溯资料。",
+        "source": "https://www.wearesellers.com/question/122520",
+        "tags": [
+          "EUDR",
+          "木制品"
+        ],
+        "priority": "high"
+      },
+      {
+        "type": "discussion",
+        "title": "付款账户验证费用和实体卡问题",
+        "dateLabel": "补档发现",
+        "summary": "社区提醒检查连连越达卡付款账户验证扣费。",
+        "detailLabel": "经营影响",
+        "detail": "付款方式异常会影响后台访问和费用结算。定期检查信用卡、付款账户、扣费失败和验证费用。",
+        "source": "https://www.wearesellers.com/question/95629",
+        "tags": [
+          "付款账户",
+          "费用"
+        ],
+        "priority": "normal"
+      },
+      {
+        "type": "discussion",
+        "title": "亚马逊后台无法创建货件",
+        "dateLabel": "补档发现",
+        "summary": "卖家反馈后台无法创建货件。",
+        "detailLabel": "经营影响",
+        "detail": "先排查账号绩效、IEN/VAT、库存限制、发货地址、模板和浏览器问题；如为系统异常，保留截图并开Case。",
+        "source": "https://www.wearesellers.com/question/122561",
+        "tags": [
+          "FBA",
+          "创建货件"
+        ],
+        "priority": "normal"
+      }
+    ]
+  },
+  {
     "date": "2026-07-20",
     "confidence": "2项官方/可信来源更新 · 8项社区经营信号",
     "executiveSummary": "7月20日的核心信号是：官方侧继续把资源投向新品启动和发票/税务自动化，社区侧则集中在标题75字符最后倒计时、自然流量下降、广告效率、品牌/商标风险、跨站合并和账号主体问题。管理层今天应重点推动三件事：标题改写批量验证、广告与自然位拆分复盘、品牌和账号证据链清理。",
