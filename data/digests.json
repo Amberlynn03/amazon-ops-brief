@@ -1,5 +1,271 @@
 [
   {
+    "date": "2026-08-12",
+    "confidence": "5项官方/API更新 · 10项社区经营信号",
+    "executiveSummary": "8月12日最需要关注的是两条线：第一，亚马逊开始把AI人物素材披露、Listing问题通知、跨站Listing数据和物流追踪能力推向更系统化的治理，素材、属性、接口和告警都需要留痕；第二，社区讨论显示卖家在广告利润、自然排名、BD价格、主体/Passkey/协议三验证、图片与变体规则、FBM退货和CPSC召回上遇到高损失问题。今天的管理重点不是继续追单点技巧，而是把广告扩量、Listing合规、账号登录与旺季履约做成可审计流程。",
+    "insights": [
+      {
+        "title": "Listing治理从文案优化升级为素材、属性、告警联动",
+        "text": "事实：官方新增AI人物素材元数据要求，SP-API更新Listing多站点读取、属性枚举和Listing问题通知版本。推断：企业不能只让运营手工改标题和图片，需要把素材来源、属性变更、API报错和前台展示结果放进同一张治理表。证据边界：AI素材旧图是否必须补标仍需以具体后台提示和法务判断为准。",
+        "signal": "官方更新 + 社区执行问题 · 高置信度"
+      },
+      {
+        "title": "广告问题正在从ACOS优化转向利润和自然流量结构",
+        "text": "事实：社区多条高热内容讨论低ACOS误区、新品ACOS破100%、广告订单占比过高、自然排名断崖式下滑。推断：只看广告组ACOS会误判扩量价值，必须同时看边际利润、TACoS、自然位、价格和库存周期。证据边界：单个类目样本不能直接泛化为全站算法变化。",
+        "signal": "社区集中反馈 · 中高置信度"
+      },
+      {
+        "title": "账号安全和旺季履约的准备窗口继续前移",
+        "text": "事实：Passkey、协议三视频验证、香港主体变更、I/X内部仓分配、旺季费用和入仓节点都在近期集中出现。推断：8月中旬以后应把账号权限、登录设备、主体文件、仓库路由、BD价格和安全合规全部纳入旺季前置检查。",
+        "signal": "官方节点 + 社区风险样本 · 高置信度"
+      }
+    ],
+    "actions": [
+      {
+        "category": "Listing与素材合规",
+        "text": "本周完成核心ASIN素材台账：真实人物、AI真人、AI背景、A+、视频、主图分别标记来源，并测试IPTC元数据写入和上传后的前台披露效果。"
+      },
+      {
+        "category": "广告与利润治理",
+        "text": "把广告日报从ACOS表升级为利润表：每个核心词同时记录广告订单、自然订单、TACoS、边际毛利、排名变化和库存天数，禁止只因ACOS高低直接开关大词。"
+      },
+      {
+        "category": "账号与旺季履约",
+        "text": "建立8月旺季检查清单：Passkey设备归属、协议三材料、主体/地址一致性、BD参考价、FBA/AWD入仓节点、Buy Shipping承运商配置和召回/保险预案。"
+      }
+    ],
+    "items": [
+      {
+        "type": "policy",
+        "title": "官方：AI生成真人素材上传前必须写入指定元数据",
+        "dateLabel": "2026-08-12发现 · 官方帖显示12小时前发布",
+        "summary": "亚马逊官方论坛说明，包含逼真AI生成真人的商品图片、视频、Listing和A+内容，在上传前必须使用兼容IPTC的工具，在XMP的dc:subject字段加入 contains-synthetic-performer。亚马逊读取到元数据后，会在适用场景向消费者展示AI人物披露标识。",
+        "detailLabel": "经营影响",
+        "detail": "这不是简单勾选项，而是素材生产流程要求。建议把设计、AI出图、修图、上传四个环节拆开管理：先判断是否出现逼真AI人物，再写入元数据，再保留源文件和处理记录；不含人物、非逼真人物、真实人物普通修图通常不属于同一要求，但仍要保证图片真实代表商品。",
+        "source": "https://sellercentral.amazon.com/seller-forums/discussions/t/aa0aee06-aff4-497a-a4b6-9b2ebe06f715",
+        "tags": [
+          "官方政策",
+          "AI图片",
+          "A+",
+          "素材合规"
+        ],
+        "priority": "high"
+      },
+      {
+        "type": "policy",
+        "title": "SP-API：LISTINGS_ITEM_ISSUES_CHANGE v1.0将停用，新版包含更细执行动作",
+        "dateLabel": "2026-08-05发布",
+        "summary": "亚马逊SP-API公告称，LISTINGS_ITEM_ISSUES_CHANGE通知v1.0从2026年8月14日起不再接受新订阅，8月26日起停止向现有订阅发送事件。新版2023-12-13增加更细的执行动作，例如Listing suppressed、Attribute suppressed、Catalog item removed。",
+        "detailLabel": "经营影响",
+        "detail": "使用ERP、刊登工具或自建告警系统的团队需要立即确认通知版本。否则8月26日后可能收不到Listing被抑制、属性无效、目录移除等告警，导致可售状态异常不能及时处理。",
+        "source": "https://developer-docs.amazon/sp-api/changelog/sp-api-updates-delivery-shipment-invoice-api-changes-and-listings_item_issues_change-v-10-deprecation",
+        "tags": [
+          "SP-API",
+          "Listing告警",
+          "技术更新"
+        ],
+        "priority": "high"
+      },
+      {
+        "type": "policy",
+        "title": "SP-API：巴西Delivery Shipment Invoice API将支持一票多发票状态",
+        "dateLabel": "2026-08-05发布 · 2026-09-30生效",
+        "summary": "同一SP-API公告还说明，巴西站getInvoiceStatus接口将在2026年9月30日起支持多张NF-e发票状态，并把顶层invoiceStatus改为orderStatus，同时新增invoices数组。查询参数优先级为amazonOrderId高于amazonShipmentId高于invoiceId。",
+        "detailLabel": "经营影响",
+        "detail": "做巴西Self Ship或Easy Ship、且依赖发票状态回传的系统要在9月30日前改解析逻辑。财税、客服和物流工具需要区分订单层面的PartiallyAccepted与单张发票的Accepted/Rejected，避免把部分发票失败误判为整单成功。",
+        "source": "https://developer-docs.amazon/sp-api/changelog/sp-api-updates-delivery-shipment-invoice-api-changes-and-listings_item_issues_change-v-10-deprecation",
+        "tags": [
+          "巴西站",
+          "发票",
+          "SP-API"
+        ],
+        "priority": "normal"
+      },
+      {
+        "type": "policy",
+        "title": "SP-API：美国站新增Tracking API v2026-01-30",
+        "dateLabel": "2026-08-05发布",
+        "summary": "亚马逊发布Tracking API v2026-01-30，美国站可用，用于获取货件在亚马逊供应链中的追踪节点。官方公告较短，更多细节需查看Release notes。",
+        "detailLabel": "经营影响",
+        "detail": "对自建物流看板、3PL对账、补货追踪和异常件排查有价值。短期建议技术团队评估是否能把入仓、转运、签收和异常节点接入现有运营日报，减少只依赖后台手工查询。",
+        "source": "https://developer-docs.amazon/sp-api/changelog/new-introducing-the-tracking-api-v2026-01-30",
+        "tags": [
+          "SP-API",
+          "物流追踪",
+          "美国站"
+        ],
+        "priority": "normal"
+      },
+      {
+        "type": "policy",
+        "title": "Buy Shipping新增承运商账户连接，支持协商价与配送保护",
+        "dateLabel": "2026-07-29发布",
+        "summary": "亚马逊SP-API公告显示，美国站Buy Shipping新增可连接的承运商账户，包括USPS、UPS Roadie、UPS Mail Innovations、OnTrac和DHL eCommerce；Seller Central、Veeqo、多渠道集成和API均可用。使用Buy Shipping API自动履约的卖家可能需要更新ship method name或ID。",
+        "detailLabel": "经营影响",
+        "detail": "FBM和多渠道发货团队可以把协商价接入Buy Shipping，同时保留符合条件的延迟配送索赔保护。需要和ERP或订单系统确认新增承运商服务ID，否则后台有选项但系统发货仍无法调用。",
+        "source": "https://developer-docs.amazon/sp-api/changelog/five-new-carriers-available-in-amazon-buy-shipping",
+        "tags": [
+          "Buy Shipping",
+          "FBM",
+          "物流"
+        ],
+        "priority": "normal"
+      },
+      {
+        "type": "case",
+        "title": "广告误区：低ACOS不一定是好事，可能意味着欠投",
+        "dateLabel": "2026-08-12发现",
+        "summary": "社区高热帖反直觉强调，ACOS长期过低可能只是投放只覆盖品牌词、精准长尾和最容易成交的人群，规模被主动限制。正确判断应看保本ACOS、目标ACOS、TACoS、边际利润和新增订单质量，而不是把最低ACOS当作唯一目标。",
+        "detailLabel": "可借鉴点",
+        "detail": "适合用于广告管理层复盘：先算单品毛利和可承受ACOS，再把广告分为防守词、利润词、扩量词和测试词。扩量词短期ACOS高但能拉自然排名和总利润时，不应被机械砍掉；反过来，低ACOS但只吃存量订单的广告组也不能证明增长有效。",
+        "source": "https://www.wearesellers.com/question/123204",
+        "tags": [
+          "广告",
+          "ACOS",
+          "利润管理"
+        ],
+        "priority": "high"
+      },
+      {
+        "type": "case",
+        "title": "美国站2款新品上架30天，ACOS破100%且大词一降销量腰斩",
+        "dateLabel": "2026-08-12发现",
+        "summary": "卖家反馈两款新品上架约30天，每款预算200美元，Vine回评十来个，星级达行业平均，但广告ACOS超过100%；大词能出单，一降CPC或关停大词销量就明显下滑。核心问题是新品冷启动阶段如何区分平台测试流量、关键词承接不足和运营动作过急。",
+        "detailLabel": "可借鉴点",
+        "detail": "建议把30天新品拆成两个目标：前14-21天验证核心词是否真相关，后续再控制亏损。大词如果一停就腰斩，说明自然流量尚未接住，不能简单关停；应把大词拆成精准、词组、商品投放和长尾承接，逐步降低无效词，并同步检查主图点击率、Review质量、价格带和竞品促销。",
+        "source": "https://www.wearesellers.com/question/123244",
+        "tags": [
+          "新品冷启动",
+          "广告",
+          "案例"
+        ],
+        "priority": "high"
+      },
+      {
+        "type": "case",
+        "title": "接手链接广告搭建：先用广告验证搜索词，而不是一开始铺满结构",
+        "dateLabel": "2026-08-12发现",
+        "summary": "实战帖以接手链接为场景，强调广告的首要功能是验证哪些搜索词真正带来订单，而不是按模板一次性铺满自动、广泛、词组、精准、商品投放。该帖与75字符标题、图片优化形成连续方法。",
+        "detailLabel": "可借鉴点",
+        "detail": "适合团队培训：先确认Listing转化基础，再用少量结构清晰的广告组采集词，再按出单词反哺标题、五点、Search Terms和图片场景。对接手老链接尤其要先做历史广告和搜索词清洗，避免新运营继续继承旧的无效预算。",
+        "source": "https://www.wearesellers.com/question/122786",
+        "tags": [
+          "广告架构",
+          "接手链接",
+          "实战方法"
+        ],
+        "priority": "high"
+      },
+      {
+        "type": "discussion",
+        "title": "意大利站保证金、税代和德国库存被调拨到意大利的风险",
+        "dateLabel": "2026-08-12发现",
+        "summary": "卖家集中询问意大利售卖是否需要5万欧保证金、多家公司能否共用保函、税代200万欧保证金与卖家保证金关系，以及不做意大利时如何避免德国库存调拨到意大利后无法售卖只能弃置。帖子为悬赏讨论，公开信息还不足。",
+        "detailLabel": "风险提示",
+        "detail": "高价值在于提醒欧洲库存布局不能只看泛欧配送便利性。建议在没有确认税代、VAT、保证金和站点售卖权限前，先限制库存跨国调拨，并向税代确认意大利仓售卖、库存持有、弃置和退仓路径。因答案未完全公开，不能把社区说法当作正式税务结论。",
+        "source": "https://www.wearesellers.com/question/123255",
+        "tags": [
+          "欧洲站",
+          "意大利",
+          "VAT",
+          "库存调拨"
+        ],
+        "priority": "high"
+      },
+      {
+        "type": "discussion",
+        "title": "同法人北美店准备更换香港主体：资料一致性和税务报送疑问",
+        "dateLabel": "2026-08-12发现",
+        "summary": "卖家只有北美站点，准备从国内主体换成同法人香港主体，同时国内营业执照已跨区迁移并更名但后台未更新。关注是否先更新国内资料、换HK主体会触发哪些审核、需要哪些章程/地址/租赁/水电账单材料，以及是否会影响税务报送。",
+        "detailLabel": "风险提示",
+        "detail": "这是高风险后台工程，不建议把主体变更当作单个表单提交。更稳妥的做法是先梳理旧主体变更链路、后台当前资料、银行和收款账户、税务身份、法人可出镜能力，再决定是先修旧资料还是直接换新主体；所有文件要能解释时间线，否则二审或视频验证时会出现口径不一致。",
+        "source": "https://www.wearesellers.com/question/123182",
+        "tags": [
+          "主体变更",
+          "香港公司",
+          "账号审核"
+        ],
+        "priority": "high"
+      },
+      {
+        "type": "discussion",
+        "title": "Passkey落地问题：远程环境不支持设备密钥，是否一账号一手机",
+        "dateLabel": "2026-08-12发现",
+        "summary": "多帖讨论亚马逊二步验证后强制设置Passkey，但部分远程VPS/Server不支持Windows Hello、指纹或PIN等设备密钥。卖家考虑一账号一台全新手机，或更换到支持Passkey的浏览器环境。",
+        "detailLabel": "可借鉴点",
+        "detail": "Passkey正在把账号安全从“知道密码和验证码”变成“绑定设备和人”。多店铺团队应明确每个账号的设备归属、备份登录方式、邮箱和Authenticator管理人，避免临时换环境触发风控；不要多人共用同一设备密钥管理核心账号。",
+        "source": "https://www.wearesellers.com/question/123219",
+        "tags": [
+          "Passkey",
+          "账号安全",
+          "登录设备"
+        ],
+        "priority": "high"
+      },
+      {
+        "type": "discussion",
+        "title": "主图因文字被系统抑制，但文字是产品设计一部分",
+        "dateLabel": "2026-08-12发现",
+        "summary": "卖家反馈产品主图被系统判定带文字并抑制显示，但文字本身属于产品外观设计，服务商和AB测试路径均未解决。当前公开答复不足，仍需以图片政策和Case证据为准。",
+        "detailLabel": "风险提示",
+        "detail": "这类问题不要继续用遮挡、拼接、加色块等方式反复试探系统，容易扩大图片审核异常。建议准备实拍证据、包装/说明书、竞品对照和产品文字属于实物设计的说明，再通过图片合规Case申诉；如果文字不是产品本体，优先重拍无文字主图。",
+        "source": "https://www.wearesellers.com/question/123269",
+        "tags": [
+          "主图",
+          "图片抑制",
+          "合规申诉"
+        ],
+        "priority": "normal"
+      },
+      {
+        "type": "discussion",
+        "title": "为了跑BD长期养价格，Prime会员价重设时最低价要求更低",
+        "dateLabel": "2026-08-12发现",
+        "summary": "卖家为了BD维持划线价299.99、日常Prime会员价199.99，计划BD卖179.99，但重新设置Prime会员价时系统只允许更低价格。问题集中在日常优惠、会员价和BD参考价之间的相互影响。",
+        "detailLabel": "可借鉴点",
+        "detail": "旺季前应建立价格日历，而不是临近BD再调。记录过去30/60/90天前台价、优惠券、Prime专享折扣、Deal价格和竞品价，避免日常促销拉低系统参考价；新品想尽快出BD，也要先算清折扣后毛利和广告预算。",
+        "source": "https://www.wearesellers.com/question/123271",
+        "tags": [
+          "BD",
+          "Prime会员价",
+          "价格管理"
+        ],
+        "priority": "high"
+      },
+      {
+        "type": "case",
+        "title": "核心大词自然排名从首页断崖跌到第二页，广告位基本未受影响",
+        "dateLabel": "2026-08-12发现",
+        "summary": "户外庭院类新品在8月接近过季时，核心大词自然位从首页20名左右快速跌到60名开外，但SP和SBV广告排名基本未受影响。卖家已自查库存充足，问题指向自然排序权重变化、季节性需求、转化或竞争环境变化。",
+        "detailLabel": "可借鉴点",
+        "detail": "自然位断崖下跌应按事件排查：是否改图改价改标题、是否断货或配送时效变化、是否Review/退货波动、是否类目节点变化、是否竞品大促或季节需求下行。广告位置不变不能证明Listing健康，短期可用精准词和SBV稳住有效点击，同时降低过季品的盲目加价抢位。",
+        "source": "https://www.wearesellers.com/question/123045",
+        "tags": [
+          "自然排名",
+          "季节品",
+          "新品案例"
+        ],
+        "priority": "high"
+      },
+      {
+        "type": "discussion",
+        "title": "儿童玩具收到CPSC NOV邮件并要求召回",
+        "dateLabel": "2026-08-04发布 · 2026-08-12发现",
+        "summary": "卖家儿童玩具被抽查测试不合格，收到CPSC NOV邮件并面临召回，担心大额召回退款和弃店后果。帖子为付费围观，公开可见信息有限，但风险级别高。",
+        "detailLabel": "风险提示",
+        "detail": "涉及CPSC和召回时，优先级高于普通绩效申诉。应立刻整理批次、测试报告、销售数量、库存、保险、供应商责任和消费者通知方案，并找熟悉美国消费品安全的律师/保险方参与；弃店不能当然切断法人和产品责任风险。",
+        "source": "https://www.wearesellers.com/question/122987",
+        "tags": [
+          "CPSC",
+          "召回",
+          "儿童玩具",
+          "产品责任"
+        ],
+        "priority": "high"
+      }
+    ]
+  },
+  {
     "date": "2026-07-24",
     "confidence": "0项新增强制官方政策 · 10项社区经营信号",
     "executiveSummary": "7月24日最重要的经营信号是AI图片标注和75字符标题进入落地期，社区开始从“要不要改”转向“怎么批量改、怎么保转化、怎么避免素材违规”。同时，库存审核、视频验证、主体地址、广告转化、自然排名消失和安全召回仍是高损失风险。今天没有发现比前期已记录内容更新的强制官方政策，因此官方侧不重复输出。",
