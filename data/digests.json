@@ -1,5 +1,288 @@
 [
   {
+    "date": "2026-08-27",
+    "confidence": "4项官方/API更新 · 10项社区经营信号",
+    "executiveSummary": "8月27日最重要的变化集中在三个经营面：SP-API 8月版本和8月中旬更新把服务商授权、外部履约沙盒、巴西发票、Listing属性枚举与开发者政策继续标准化；社区高频问题显示卖家正在被外部比价、参考价、搜索图片灰度、欧洲地址/泛欧物流资料、品牌备案和产品安全审核同时挤压；广告侧讨论从“加价抢流量”转向“先识别流量位置、需求人群和利润边界”。今天应把技术接口、价格系统、账号资料和Listing前台表现放进同一套旺季前风险清单。",
+    "insights": [
+      {
+        "title": "接口和合规政策正在逼近系统化运营",
+        "text": "事实：SP-API 8月版本、服务商简化授权、外部履约沙盒动态化、巴西多发票和Listing属性枚举变化连续发布。推断：依赖ERP、刊登工具、履约系统和广告数据看板的卖家，需要把API变更当作运营风险，而不是只交给技术团队。证据边界：具体字段影响仍需以各工具商和站点测试结果为准。",
+        "signal": "官方API公告 · 高置信度"
+      },
+      {
+        "title": "价格与购物车风险比单纯广告优化更紧急",
+        "text": "事实：外部比价丢购物车、Coupon拉低参考价、BD期间List Price验证失败多帖同时出现。推断：价格历史、优惠券、Prime会员价、Deal价格和站外低价监控必须统一管理，否则广告预算会被无购物车或低参考价直接吞掉。",
+        "signal": "社区集中反馈 · 中高置信度"
+      },
+      {
+        "title": "前台展示开始出现更强的算法选择痕迹",
+        "text": "事实：社区反馈搜索结果页可能展示副图而非白底主图，AR模型、站内流量和人群需求的讨论热度上升。推断：主图不再是唯一前台流量入口，副图、3D/AR、场景图和搜索意图匹配会影响点击率与转化判断。证据边界：副图替代主图目前仍是社区观察和客服解释，不能视为官方全站规则。",
+        "signal": "社区观察 + 个案证据 · 中等置信度"
+      }
+    ],
+    "actions": [
+      {
+        "category": "价格与购物车",
+        "text": "建立核心ASIN价格证据表：过去90天前台价、Coupon、Prime专享折扣、BD/LD价格、站外低价链接、购物车丢失时间和申诉记录必须按日留档。"
+      },
+      {
+        "category": "Listing前台资产",
+        "text": "把主图、副图、A+、视频、AR/3D模型和AI素材标签作为一组前台资产复盘，观察搜索词下实际展示哪张图，避免只优化后台主图。"
+      },
+      {
+        "category": "技术与账号合规",
+        "text": "让ERP/服务商确认SP-API 8月更新影响清单，同时复核欧洲主要营业地址、PAN-EU MRN/EORI、品牌备案材料和产品安全认证证据包。"
+      }
+    ],
+    "items": [
+      {
+        "type": "policy",
+        "title": "官方：August 2026 SP-API Release 发布",
+        "dateLabel": "2026-08-26发布",
+        "summary": "亚马逊SP-API发布8月版本说明，官方公告指向Release Notes和Deprecation Schedule，用于集中查看本月接口、模型和弃用节奏。公告本身信息较短，但它是技术团队排查8月接口变更的总入口。",
+        "detailLabel": "经营影响",
+        "detail": "建议ERP、自建刊登、BI和履约系统把8月Release Notes列入本周检查项，重点确认是否涉及Listing、履约、发票、通知和数据权限。运营侧要知道哪些后台异常可能来自接口变更，而不是只按人工误操作处理。",
+        "source": "https://developer-docs.amazon/sp-api/changelog/august-2026-sp-api-release",
+        "tags": [
+          "SP-API",
+          "技术更新",
+          "系统治理"
+        ],
+        "priority": "high"
+      },
+      {
+        "type": "policy",
+        "title": "SP-API：服务商授权流程简化、外部履约沙盒改为动态响应",
+        "dateLabel": "2026-08-19发布",
+        "summary": "亚马逊SP-API更新包括服务商简化授权、External Fulfillment API沙盒从静态硬编码响应过渡到动态响应，并继续补充巴西多发票支持变化。对接外部服务商、仓配系统或测试环境的团队会直接受影响。",
+        "detailLabel": "经营影响",
+        "detail": "服务商授权变简单不等于权限治理可以放松。企业应重新梳理每个服务商可访问的数据范围、授权人、到期复核和撤销流程；外部履约沙盒动态化后，测试用例要覆盖异常状态，而不是只验证固定成功返回。",
+        "source": "https://developer-docs.amazon/sp-api/changelog/sp-api-updates-simplified-authorization-for-service-providers-external-fulfillment-sandbox-changes-and-multi-invoice-support-changes-for-brazil",
+        "tags": [
+          "SP-API",
+          "服务商授权",
+          "外部履约"
+        ],
+        "priority": "high"
+      },
+      {
+        "type": "policy",
+        "title": "SP-API：开发者协议、数据保护政策、AUP及Listing属性枚举更新",
+        "dateLabel": "2026-08-12发布",
+        "summary": "亚马逊SP-API公告更新Data Protection Policy、Solution Provider Portal Agreement和Acceptable Use Policy，同时涉及巴西ShipperTrackingNumber验证，以及8月Listing属性用途和枚举值变化。",
+        "detailLabel": "经营影响",
+        "detail": "这类更新会影响服务商合规、数据保留、接口调用和批量刊登模板。建议把数据权限、日志保留、Listing字段校验和巴西物流单号规则拆成四个检查项，避免工具商接口通过但平台侧后续拒收或抑制。",
+        "source": "https://developer-docs.amazon/sp-api/changelog/sp-api-updates-solution-provider-portal-agreement-and-policy-updates-br-store-shippertrackingnumber-validation-and-listings-attribute-and-enumeration-values-changes",
+        "tags": [
+          "SP-API",
+          "数据保护",
+          "Listing属性",
+          "巴西站"
+        ],
+        "priority": "high"
+      },
+      {
+        "type": "policy",
+        "title": "LISTINGS_ITEM_ISSUES_CHANGE v1.0今日停止向现有订阅发送事件",
+        "dateLabel": "2026-08-26生效",
+        "summary": "此前公告中明确，LISTINGS_ITEM_ISSUES_CHANGE v1.0在8月14日停止新订阅后，将于2026年8月26日起停止向现有订阅发送事件。新版通知包含Listing suppressed、Attribute suppressed、Catalog item removed等更细动作。",
+        "detailLabel": "经营影响",
+        "detail": "如果工具还停在v1.0，今天起可能漏掉Listing被抑制、属性无效或目录移除事件。建议立即做一次告警演练：随机抽查被抑制ASIN，确认ERP、飞书/邮件告警和后台账户状况是否能同步发现。",
+        "source": "https://developer-docs.amazon/sp-api/changelog/sp-api-updates-delivery-shipment-invoice-api-changes-and-listings_item_issues_change-v-10-deprecation",
+        "tags": [
+          "SP-API",
+          "Listing告警",
+          "生效提醒"
+        ],
+        "priority": "high"
+      },
+      {
+        "type": "discussion",
+        "title": "外部比价丢购物车：找不到低价源头时如何长期防复发",
+        "dateLabel": "2026-08-27发现",
+        "summary": "卖家反馈后台提示因外部零售商比价导致报价不具竞争力，购物车消失，订单和广告转化直接崩盘；难点是后台不给具体低价链接，Google识图和Temu等平台也找不到源头。服务商可临时申诉恢复，但系统缓存可能导致二次丢购物车。",
+        "detailLabel": "可借鉴点",
+        "detail": "短期先保留购物车丢失时间、后台截图、同款搜索证据和申诉路径；中期要做站外价格监控、包装/LOGO/套装差异化、渠道控价和经销商授权管理。仅改主图或包装可能能降低同款识别概率，但不能替代价格体系治理。",
+        "source": "https://www.wearesellers.com/question/123894",
+        "tags": [
+          "购物车",
+          "外部比价",
+          "价格治理"
+        ],
+        "priority": "high"
+      },
+      {
+        "type": "case",
+        "title": "德国站服装新品：自动紧密流量都在商品页，提价后不出单",
+        "dateLabel": "2026-08-27发现",
+        "summary": "德国站服装新品上架一个多月，主要靠自动紧密广告，流量集中在商品详情页，搜索结果页流量少；拉高竞价后点击增加但仍难拿搜索位，提价后转化变差，手动精准也起不来。",
+        "detailLabel": "可借鉴点",
+        "detail": "这不是单纯继续加价的问题。应先拆分商品页流量和搜索流量的转化质量：商品页能出单说明可做竞品定投和替代场景，搜索位拿不到可能是标题/价格/Review/图片承接不足。建议先把价格降回可转化区间，保留有效商品页投放，再用少量精准词测试搜索页点击和转化。",
+        "source": "https://www.wearesellers.com/question/123881",
+        "tags": [
+          "德国站",
+          "服装",
+          "广告",
+          "新品案例"
+        ],
+        "priority": "high"
+      },
+      {
+        "type": "discussion",
+        "title": "Coupon挂太久拉低参考价，Checkout折扣是否也会被抓取",
+        "dateLabel": "2026-08-27发现",
+        "summary": "卖家因优惠券长期挂着，被系统抓到折后价并拉低参考价，取消Coupon后想用Checkout折扣稳住转化，但担心继续影响参考价。问题本质是促销价格历史如何影响Deal和前台参考价。",
+        "detailLabel": "可借鉴点",
+        "detail": "不要把Coupon、Prime会员价、Checkout折扣、BD/LD分开看。建议建立90天促销日历，标记每种优惠的前台成交价和持续天数；恢复参考价期间应减少长期可见折扣，优先用短周期、明确目的的促销，并观察Was Price/List Price验证状态。",
+        "source": "https://www.wearesellers.com/question/123869",
+        "tags": [
+          "Coupon",
+          "参考价",
+          "Deal"
+        ],
+        "priority": "high"
+      },
+      {
+        "type": "discussion",
+        "title": "欧洲站主要营业地址审核：180天账单与挂靠地址风险",
+        "dateLabel": "2026-08-27发现",
+        "summary": "社区讨论称欧洲/英国卖家遇到主要营业地址真实性核验，关注近180天水电、网络、银行等账单，挂靠地址和中国银行综合信息凭证能否通过存在不确定性。该帖公开信息较多，但仍属于社区解读。",
+        "detailLabel": "风险提示",
+        "detail": "主要营业地址不是注册地址。建议欧洲账号准备真实办公地址证据、租赁/水电/网络/银行账单、员工或运营痕迹，并保持后台、税代、银行和KYC材料一致；挂靠地址风险高，不能只靠模板账单碰运气。",
+        "source": "https://www.wearesellers.com/question/123898",
+        "tags": [
+          "欧洲站",
+          "地址审核",
+          "KYC",
+          "税务合规"
+        ],
+        "priority": "high"
+      },
+      {
+        "type": "discussion",
+        "title": "Product safety investigation与农药设备资质提示无绩效通知",
+        "dateLabel": "2026-08-27发现",
+        "summary": "美国站同一父体内链接分别提示Product safety investigation和Qualification required (pesticides and pesticide devices)，但没有绩效通知。卖家主要想确认如何挽回链接。",
+        "detailLabel": "风险提示",
+        "detail": "无绩效通知不代表风险低。先冻结Listing高风险词和用途表达，下载当前后台字段与前台页面证据，核对是否触发EPA农药设备、杀菌、驱虫、抗菌等宣称；安全调查类问题要准备检测报告、说明书、合规声明和供应商文件，避免先删除链接导致证据断裂。",
+        "source": "https://www.wearesellers.com/question/123871",
+        "tags": [
+          "产品安全",
+          "农药设备",
+          "美国站",
+          "申诉"
+        ],
+        "priority": "high"
+      },
+      {
+        "type": "discussion",
+        "title": "品牌备案被撤：商标买回、投诉撤回后Brand Registry仍被拒",
+        "dateLabel": "2026-08-27发现",
+        "summary": "卖家欧盟商标曾被第三方抢注并投诉19条核心ASIN，随后Brand Registry被撤；商标买回、EUIPO完成转让、投诉撤回且账户健康正常后，重新申请备案仍被拒，回复集中在未经授权商标术语、Generic商品和权利人问题。",
+        "detailLabel": "可借鉴点",
+        "detail": "品牌恢复不是只提交商标转让证明。应按时间线整理：抢注前使用证据、投诉撤回证明、EUIPO转让记录、Listing品牌字段、包装实拍、官网/发票/采购链和历史授权关系；同时清理Generic或错误品牌字段，避免系统继续把旧风险与新备案绑定。",
+        "source": "https://www.wearesellers.com/question/123858",
+        "tags": [
+          "品牌备案",
+          "商标",
+          "Brand Registry"
+        ],
+        "priority": "high"
+      },
+      {
+        "type": "case",
+        "title": "高客单产品评分卡在4.1-4.3，低于头部竞品4.5-4.6",
+        "dateLabel": "2026-08-27发现",
+        "summary": "卖家4个约100美元高客单产品中，老品评分4.3，新品4.1-4.5，头部竞品普遍4.5-4.6且评论数更多。问题是如何系统化提升评分，而不是单次拉评。",
+        "detailLabel": "可借鉴点",
+        "detail": "评分管理应拆成三层：先用退货原因、买家之声和差评文本找产品缺陷；再用包装、说明书、售后卡和客服时效降低可避免差评；最后用Vine、Request a Review和新品节奏提高真实评价基数。高客单产品评分低于4.3时，广告扩量前应先解决体验问题。",
+        "source": "https://www.wearesellers.com/question/123817",
+        "tags": [
+          "Review",
+          "评分",
+          "高客单"
+        ],
+        "priority": "high"
+      },
+      {
+        "type": "discussion",
+        "title": "退货流程中出现评分入口，高退货类目差评风险上升",
+        "dateLabel": "2026-08-27发现",
+        "summary": "社区帖认为“退货自动索评”的说法不准确，更像是在退货客服AI对话流程末尾出现评分入口。服装、饰品、电子等退货率较高类目可能更容易在退货场景中收到低星评价。",
+        "detailLabel": "风险提示",
+        "detail": "如果类目退货率高，应把退货原因当作评价风险入口处理。优化尺码、兼容性、安装说明、包装保护和客服响应，比单纯控评更有效；同时监控退货后1-7天Rating变化，识别物流慢、误购、不兼容等可被前置说明降低的原因。",
+        "source": "https://www.wearesellers.com/question/123720",
+        "tags": [
+          "退货",
+          "Review",
+          "买家之声"
+        ],
+        "priority": "high"
+      },
+      {
+        "type": "discussion",
+        "title": "PAN-EU与法国入库9月1日起需MRN+EORI，税报资料卡点",
+        "dateLabel": "2026-08-12发布 · 2026-08-27仍有实操价值",
+        "summary": "卖家讨论9月1日起通过PAN-EU入库欧盟货件以及直接发往法国的货件需要提供MRN+EORI，货代称只能走自税且需要近三个月税报文件，但部分公司是年度申报，无法提供近三个月税报。",
+        "detailLabel": "风险提示",
+        "detail": "临近9月节点，泛欧入库不能只听货代口径。卖家应提前确认EORI、进口主体、MRN获取路径、税报替代资料和法国/泛欧库存调拨安排；不能满足资料时，要提前切换入库国家或配送方案，避免货到港口或仓前才发现无法清关。",
+        "source": "https://www.wearesellers.com/question/123289",
+        "tags": [
+          "PAN-EU",
+          "MRN",
+          "EORI",
+          "欧洲物流"
+        ],
+        "priority": "high"
+      },
+      {
+        "type": "discussion",
+        "title": "ASIN定投广告运行多年后突然断流，CPC上调只能短暂恢复",
+        "dateLabel": "2026-08-27发现",
+        "summary": "卖家多个产品的ASIN定投广告在运行2-3年后突然预算花不出去、点击减少、订单下滑；上调CPC有时能恢复一段时间，但之后继续衰退。公开信息不足以判断是否为平台算法变化。",
+        "detailLabel": "可借鉴点",
+        "detail": "先排除竞品不可售、价格变化、类目流量下滑、广告资格和库存配送问题，再判断是否是定投池老化。可把老定投拆成核心竞品、替代竞品、互补竞品和防守ASIN四组，重建相似ASIN池，并同步测试搜索词广告补流。",
+        "source": "https://www.wearesellers.com/question/123790",
+        "tags": [
+          "ASIN定投",
+          "广告断流",
+          "PPC"
+        ],
+        "priority": "normal"
+      },
+      {
+        "type": "discussion",
+        "title": "搜索结果前台显示副图而非白底主图，疑似按搜索意图选图",
+        "dateLabel": "2026-08-27发现",
+        "summary": "卖家反馈登录买家账号搜索时，部分商品展示副图而不是白底主图；无痕模式下又显示白底图。客服解释可能是搜索系统根据买家搜索意图自动选择最匹配图片，而非始终展示主图。",
+        "detailLabel": "可借鉴点",
+        "detail": "该现象尚不能视为官方全站规则，但足以调整图片复盘方式。核心词下要实际截图记录展示图，确保副图也具备清晰卖点、合规背景和点击率，而不是只把白底主图当唯一搜索入口。",
+        "source": "https://www.wearesellers.com/question/123893",
+        "tags": [
+          "图片展示",
+          "搜索意图",
+          "主图"
+        ],
+        "priority": "normal"
+      },
+      {
+        "type": "discussion",
+        "title": "美国膳食补充剂标签地址：经销商地址与不良事件联络点",
+        "dateLabel": "2026-08-27发现",
+        "summary": "卖家讨论美国膳食补充剂标签必须标注制造商、包装商或经销商名称与完整营业地址，并涉及本土不良事件联络点。对于没有美国公司的卖家，公开信息显示仍需严肃处理标签地址和责任主体。",
+        "detailLabel": "风险提示",
+        "detail": "膳食补充剂属于高合规类目，不建议用虚拟地址或模糊主体应付。应确认FDA标签规则、经销商关系表述、美国联系地址、不良事件接收流程和保险安排，再决定是否用美国经销商、代理或自建主体承接。",
+        "source": "https://www.wearesellers.com/question/123826",
+        "tags": [
+          "膳食补充剂",
+          "FDA",
+          "标签合规"
+        ],
+        "priority": "high"
+      }
+    ]
+  },
+  {
     "date": "2026-08-12",
     "confidence": "5项官方/API更新 · 10项社区经营信号",
     "executiveSummary": "8月12日最需要关注的是两条线：第一，亚马逊开始把AI人物素材披露、Listing问题通知、跨站Listing数据和物流追踪能力推向更系统化的治理，素材、属性、接口和告警都需要留痕；第二，社区讨论显示卖家在广告利润、自然排名、BD价格、主体/Passkey/协议三验证、图片与变体规则、FBM退货和CPSC召回上遇到高损失问题。今天的管理重点不是继续追单点技巧，而是把广告扩量、Listing合规、账号登录与旺季履约做成可审计流程。",
