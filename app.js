@@ -2,13 +2,30 @@ const state = { digests: [], selectedDate: "", type: "all", tag: "", query: "", 
 const typeLabels = { policy: "官方政策", discussion: "卖家讨论", case: "实战案例" };
 
 async function init() {
-  const response = await fetch("data/digests.json", { cache: "no-store" });
-  if (!response.ok) throw new Error(`HTTP ${response.status}`);
-  state.digests = (await response.json()).sort((a, b) => b.date.localeCompare(a.date));
+  state.digests = await loadDigests();
   state.selectedDate = state.digests[0]?.date || "";
   bindEvents();
   populateDates();
   render();
+}
+
+async function loadDigests() {
+  const primary = await fetchJson("data/digests.json");
+  const supplement = await fetchJson("data/digests-supplement.json", true);
+  const byDate = new Map();
+  [...primary, ...supplement].forEach(digest => {
+    if (digest?.date) byDate.set(digest.date, digest);
+  });
+  return [...byDate.values()].sort((a, b) => b.date.localeCompare(a.date));
+}
+
+async function fetchJson(path, optional = false) {
+  const response = await fetch(`${path}?v=${Date.now()}`, { cache: "no-store" });
+  if (!response.ok) {
+    if (optional && response.status === 404) return [];
+    throw new Error(`${path} HTTP ${response.status}`);
+  }
+  return response.json();
 }
 
 function bindEvents() {
